@@ -22,7 +22,7 @@ public class Appointment extends AuditModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    
     @NotNull
     @NotBlank
     @Size(max = 20)
