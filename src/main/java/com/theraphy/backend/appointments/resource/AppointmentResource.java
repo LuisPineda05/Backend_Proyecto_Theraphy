@@ -10,6 +10,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class AppointmentResource {
+    
     private Long id;
     private String scheduledDate;
     private String topic;
@@ -17,4 +18,5 @@ public class AppointmentResource {
     private String done;
     private PatientResource patient;
     private PhysiotherapistResource physiotherapist;
+    
 }
