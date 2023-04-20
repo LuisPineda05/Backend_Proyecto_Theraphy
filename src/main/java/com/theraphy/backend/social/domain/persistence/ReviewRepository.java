@@ -8,8 +8,11 @@ import java.util.Optional;
 
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Long> {
+    
     Optional<Review> findByStarsAndPatientId(Long stars, Long patientId);
+    
     Optional<Review> findByStarsAndPhysiotherapistId(Long stars, Long physiotherapistId);
+    
     Review findByStars(Long stars);
 
 }
