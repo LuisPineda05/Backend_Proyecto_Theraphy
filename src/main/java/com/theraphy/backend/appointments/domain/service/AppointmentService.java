@@ -8,7 +8,6 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface AppointmentService {
-
     List<Appointment> getAll();
     Page<Appointment> getAll(Pageable pageable);
     Appointment getById(Long appointmentId);
