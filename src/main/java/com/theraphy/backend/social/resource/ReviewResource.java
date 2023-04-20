@@ -10,9 +10,11 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ReviewResource {
+    
     private Long id;
     private String description;
     private Long stars;
     private PatientResource patient;
     private PhysiotherapistResource physiotherapist;
+    
 }
