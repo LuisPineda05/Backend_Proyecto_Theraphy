@@ -10,14 +10,15 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-@Getter
 @Setter
+@Getter
 @With
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Table(name = "reviews")
 public class Review extends AuditModel {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -37,7 +38,5 @@ public class Review extends AuditModel {
     @ManyToOne(fetch = FetchType.EAGER, optional = false)
     @JoinColumn(name = "physiotherapist_id", nullable = false)
     private Physiotherapist physiotherapist;
-
-
 
 }
