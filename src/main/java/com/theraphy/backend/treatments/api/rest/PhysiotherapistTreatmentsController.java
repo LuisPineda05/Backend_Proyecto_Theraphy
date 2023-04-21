@@ -26,12 +26,14 @@ public class PhysiotherapistTreatmentsController {
         this.mapper = mapper;
     }
 
+
     @GetMapping
     public Page<TreatmentResource> getAllTreatmentsByPhysiotherapistId(@PathVariable Long physiotherapistId,
                                                                     Pageable pageable) {
         return mapper.modelListPage(physiotherapistService.getById(physiotherapistId)
                 .getTreatments().stream().toList(), pageable);
     }
+
 
     @PostMapping
     public TreatmentResource createTreatment(@PathVariable Long physiotherapistId,
