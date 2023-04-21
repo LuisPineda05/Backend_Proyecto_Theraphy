@@ -49,7 +49,6 @@ Treatment extends AuditModel {
     @JoinColumn(name = "physiotherapist_id", nullable = false)
     private Physiotherapist physiotherapist;
 
-
     @OneToMany(cascade = CascadeType.ALL,
             fetch = FetchType.EAGER, mappedBy = "treatment")
     private Set<TreatmentPatient> treatments = new HashSet<>();

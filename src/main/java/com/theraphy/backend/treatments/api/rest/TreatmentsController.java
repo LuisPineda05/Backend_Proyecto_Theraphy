@@ -30,6 +30,7 @@ public class TreatmentsController {
         return mapper.modelListPage(treatmentService.getAll(), pageable);
     }
 
+
     @GetMapping("{treatmentId}")
     public TreatmentResource getTreatmentById(@PathVariable Long treatmentId) {
         return mapper.toResource(treatmentService.getById(treatmentId));
@@ -40,11 +41,13 @@ public class TreatmentsController {
         return new ResponseEntity<>(mapper.toResource(treatmentService.create(mapper.toModel(resource))), HttpStatus.CREATED);
     }
 
+
     @PutMapping("{treatmentId}")
     public TreatmentResource updateTreatment(@PathVariable Long treatmentId,
                                              @RequestBody UpdateTreatmentResource resource) {
         return mapper.toResource(treatmentService.update(treatmentId, mapper.toModel(resource)));
     }
+
 
     @DeleteMapping("{treatmentId}")
     public ResponseEntity<?> deleteTreatment(@PathVariable Long treatmentId) {
