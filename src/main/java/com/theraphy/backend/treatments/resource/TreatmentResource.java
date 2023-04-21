@@ -9,11 +9,11 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 public class TreatmentResource {
+
     private Long id;
     private String title;
     private String description;
     private String photoUrl;
     private int sessionsQuantity;
     private PhysiotherapistResource physiotherapist;
-
 }

@@ -46,9 +46,6 @@ public class TreatmentPatientServiceImpl implements TreatmentPatientService {
                 .orElseThrow(()-> new ResourceNotFoundException(ENTITY, treatmentPatientId));
     }
 
-
-
-
     @Override
     public TreatmentPatient create(TreatmentPatient treatmentPatient) {
         Set<ConstraintViolation<TreatmentPatient>> violations = validator.validate(treatmentPatient);

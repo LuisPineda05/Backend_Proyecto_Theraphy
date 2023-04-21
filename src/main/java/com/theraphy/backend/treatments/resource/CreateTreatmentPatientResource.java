@@ -15,7 +15,6 @@ import java.util.Date;
 public class CreateTreatmentPatientResource {
 
     private TreatmentResource treatment;
-
     private PatientResource patient;
 
     @NotNull
