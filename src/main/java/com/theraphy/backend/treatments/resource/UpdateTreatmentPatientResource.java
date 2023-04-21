@@ -14,9 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 public class UpdateTreatmentPatientResource {
 
-
     private TreatmentResource treatment;
-
     private PatientResource patient;
 
     @NotNull

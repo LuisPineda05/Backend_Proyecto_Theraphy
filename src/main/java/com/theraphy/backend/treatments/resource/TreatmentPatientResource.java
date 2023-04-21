@@ -17,4 +17,5 @@ public class TreatmentPatientResource {
     private PatientResource patient;
     private Date registrationDate;
     private Double progress;
+
 }
