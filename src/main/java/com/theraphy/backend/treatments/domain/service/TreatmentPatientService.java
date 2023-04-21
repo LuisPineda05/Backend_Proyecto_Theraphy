@@ -11,11 +11,9 @@ public interface TreatmentPatientService {
     List<TreatmentPatient> getAll();
     Page<TreatmentPatient> getAll(Pageable pageable);
     TreatmentPatient getById(Long treatmentPatientId);
-
     TreatmentPatient create(TreatmentPatient treatmentPatient);
     TreatmentPatient update(Long treatmentPatientId, TreatmentPatient request);
     ResponseEntity<?> delete(Long treatmentPatientId);
-
     TreatmentPatient getByTreatmentId(Long treatmentId);
 
 }
