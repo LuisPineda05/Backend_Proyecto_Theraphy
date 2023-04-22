@@ -8,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import java.util.List;
 
 public interface PhysiotherapistService {
-    List<Physiotherapist> getAll();
     Page<Physiotherapist> getAll(Pageable pageable);
+    List<Physiotherapist> getAll();
     Physiotherapist getById(Long physiotherapistId);
 
     Physiotherapist getByUserId(Long userId);
