@@ -6,8 +6,12 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
+
 @Repository
 public interface PatientRepository extends JpaRepository<Patient,Long> {
+    
     Patient findByFirstName(String firstName);
+    
     Optional<Patient> findByUserId(Long userId);
+    
 }
