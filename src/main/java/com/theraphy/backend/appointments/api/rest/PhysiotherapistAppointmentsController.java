@@ -11,8 +11,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping(value = "/api/v1/physiotherapists/{physiotherapistId}/appointments", produces = "application/json")
 @Tag(name = "Physiotherapist Appointments", description = "Create, read, update and delete appointments")
+@RequestMapping(value = "/api/v1/physiotherapists/{physiotherapistId}/appointments", produces = "application/json")
 public class PhysiotherapistAppointmentsController {
 
     private final PhysiotherapistService physiotherapistService;
