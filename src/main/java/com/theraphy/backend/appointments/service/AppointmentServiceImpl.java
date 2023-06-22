@@ -93,4 +93,13 @@ public class AppointmentServiceImpl implements AppointmentService {
     public Appointment getByTopicAndPhysiotherapistId(String topic, Long physiotherapistId) {
         return appointmentRepository.findByTopicAndPhysiotherapistId(topic, physiotherapistId).orElseThrow(()-> new ResourceNotFoundException("No Appointment with this name found for Physiotherapist"));
     }
+
+    @Override
+    public Appointment updateDiagnosis(Long appointmentId, Appointment request) {
+        return appointmentRepository.findById(appointmentId).map(appointment ->
+                appointmentRepository.save(
+                        appointment.withDiagnosis(request.getDiagnosis())
+                )).orElseThrow(() -> new ResourceNotFoundException(ENTITY, appointmentId));
+    }
+
 }

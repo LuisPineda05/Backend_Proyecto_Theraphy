@@ -16,4 +16,5 @@ public interface AppointmentService {
     ResponseEntity<?> delete(Long appointmentId);
     Appointment getByTopicAndPatientId(String topic, Long patientId);
     Appointment getByTopicAndPhysiotherapistId(String topic, Long physiotherapistId);
+    Appointment updateDiagnosis(Long appointmentId,Appointment request);
 }
