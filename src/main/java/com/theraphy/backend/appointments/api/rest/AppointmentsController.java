@@ -49,4 +49,10 @@ public class AppointmentsController {
     public ResponseEntity<?> deleteAppointment(@PathVariable Long appointmentId) {
         return appointmentService.delete(appointmentId);
     }
+
+    @PatchMapping("{appointmentId}")
+    public ResponseEntity<AppointmentResource> updateLikes(@PathVariable Long appointmentId, @RequestBody UpdateAppointmentResource resource){
+        return new ResponseEntity<>(mapper.toResource(appointmentService.updateDiagnosis(appointmentId, mapper.toModel(resource))), HttpStatus.ACCEPTED);
+    }
 }
+
